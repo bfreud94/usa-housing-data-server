@@ -33,7 +33,7 @@ app.use(helmet());
 
 // Use CORS (fix when deploying to production)
 app.use(cors({
-    origin: process.env.NODE_ENV.trim() === 'development' ? 'http://localhost:3000' : 'https://my-shopping-list-client.vercel.app'
+    origin: process.env.NODE_ENV.trim() === 'development' ? 'http://localhost:3000' : 'https://usa-housing-data-client-fljpmv5r9.vercel.app'
 }));
 
 // Use Express Routes
