@@ -6,3 +6,6 @@
 
 # VSCode Settings
 /.vscode
+
+# Debug log files
+**/debug.log

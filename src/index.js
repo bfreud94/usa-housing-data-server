@@ -39,6 +39,10 @@ app.use(cors({
 // Use Express Routes
 app.use('/api/housingData', housingData);
 
+app.get('/', (req, res) => {
+    res.send({message: 'Hello World!'});
+});
+
 // Use custom middlewares
 app.use(middlewares.notFound);
 app.use(middlewares.errorHandler);
