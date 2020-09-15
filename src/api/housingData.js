@@ -16,7 +16,7 @@ router.get('/data', async (req, res, next) => {
             if(index !== 0) {
                 const { latitude, longitude } = zipcodes.lookup(row[2]);
                 const medianPrice = row[row.length - 1].toString();
-                data.push([latitude, longitude, medianPrice]);
+                data.push([latitude, longitude, parseInt(medianPrice)]);
             }
         });
         res.send(data);
