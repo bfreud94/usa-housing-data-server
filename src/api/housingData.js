@@ -8,9 +8,7 @@ const router = express.Router();
 
 router.get('/data', async (req, res, next) => {
     try {
-        const filePath = process.env.NODE_ENV.trim() === 'development'
-            ? `${path.join(__dirname, '\\..\\')}resources\\${process.env.test_file}`
-            : `${path.join(__dirname, '../')}resources/${process.env.test_file}`;
+        const filePath = path.join(__dirname, `../resources/${process.env.test_file}`);
         const csvString = await fs.readFile(filePath, 'utf-8');
         const rows = await csv.parse(csvString);
         const data = [];
