@@ -31,7 +31,6 @@ app.use(morgan('common'));
 // Use Helmet
 app.use(helmet());
 
-// Use CORS (fix when deploying to production)
 app.use(cors({
     origin: process.env.NODE_ENV.trim() === 'development' ? 'http://localhost:3000' : 'https://usa-housing-data-client.vercel.app'
 }));
